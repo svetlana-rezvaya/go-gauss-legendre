@@ -10,6 +10,7 @@ func main() {
 	b := 1.0 / math.Sqrt(2)
 	t := 1.0 / 4.0
 	p := 1.0
+	n := 0
 	for math.Abs(a-b) > 0.000001 {
 		aNext := (a + b) / 2.0
 		bNext := math.Sqrt(a * b)
@@ -20,8 +21,12 @@ func main() {
 		b = bNext
 		t = tNext
 		p = pNext
+
+		n = n + 1
 	}
 
 	pi := math.Pow(a+b, 2) / (4 * t)
-	fmt.Println(pi)
+	fmt.Println("pi =", pi)
+
+	fmt.Println("number of iterations =", n)
 }
