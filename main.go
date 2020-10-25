@@ -12,14 +12,14 @@ func main() {
 
 	a := 1.0
 	b := 1.0 / math.Sqrt(2)
-	t := 1.0 / 4.0
+	t := 1.0 / 4
 	p := 1.0
 	n := 0
 	for math.Abs(a-b) > *epsilon {
-		aNext := (a + b) / 2.0
+		aNext := (a + b) / 2
 		bNext := math.Sqrt(a * b)
-		tNext := t - p*math.Pow(a-aNext, 2.0)
-		pNext := 2.0 * p
+		tNext := t - p*math.Pow(a-aNext, 2)
+		pNext := 2 * p
 
 		a = aNext
 		b = bNext
